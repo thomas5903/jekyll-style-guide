@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- build:css(app) /n/main.css -->
+          <script src="_bower_components/less/dist/less-1.7.5.js"></script>
+          <link rel="stylesheet" href="_bower_components/bootstrap/dist/css/bootstrap.css">
+          <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+          {% include styles.html %}
+          <!-- <link rel="stylesheet" href="n/main.css"> -->
+        <!-- Syntax highlighting CSS -->
+
+        <!-- Custom CSS -->
+        
+        <!-- endbuild -->
+
+    </head>
+    <body>
+      
+       <div id="wrap">
+
+      <!-- Header -->
+      {% include header.html %}
+      <!-- Header end-->
+        
+        <!-- dir-nav -->
+        {% include dir-nav.html %}
+        <!-- dir-nav end-->
+
+      <!-- Begin page content -->
+      <div class="container-md">
+      <!-- nav-menu -->
+        {% include nav-menu.html %}
+        <!-- nav-menu end-->
+
+        <!-- main-content -->
+        <div class="col-md-10 main-content">
+            {{content}}
+        </div>
+        <!-- main-content end-->
+
+      </div><!-- end of container -->
+
+      
+    </div><!-- end of the wrap div -->
+    <!-- footer -->
+    {% include footer.html %}
+    <!-- footer end-->
+
+
+    <!-- build:js(app) /y/scripts.js -->
+    <script src="_bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="_bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+    </body>
+</html>
