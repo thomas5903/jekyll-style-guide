@@ -39,8 +39,13 @@
         <!-- nav-menu end-->
 
         <!-- main-content -->
+        {{page.title}}
         <div class="col-md-10 main-content">
-            {{content}}
+            {% if page.title == 'index' %}
+              {% include pages/welcome.html %}
+            {% else %}
+              {{content}}
+            {% endif %}
         </div>
         <!-- main-content end-->
 
