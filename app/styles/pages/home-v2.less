@@ -1,0 +1,258 @@
+// header
+#header{
+	
+	.heart-icon{
+		color:red;
+	}
+	.buixld{
+		color:#a2a2a2;
+	}
+
+	.row{
+		padding-top: 10px;
+	}
+
+}
+
+
+//previous and next arrows at top of page
+#direction-nav-wrap{
+
+	float:right;
+	margin-right: 30px; 
+	margin-top: 20px;
+
+	.direction-nav-menu{
+		position: relative;
+		float: right;
+		margin-right: 10px;
+
+		.prev-icon{
+			padding-right: 10px;
+			color: #3B7FBE;
+		}
+		.next-icon{
+			padding-left: 10px;
+			color: #3B7FBE;
+		}
+
+	}
+	
+}
+
+//side navigation
+.side-nav {
+	ul li a {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 0;
+		color: #919191;
+
+	}
+
+	ul li a {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	ul li a:hover {
+		background-color: transparent;
+	}
+
+	ul li a:active,
+	ul li a:focus,
+	ul li a:hover {
+		color: black;
+	}
+
+}
+
+// nav scrolling highlight styles
+//
+
+//left border highlight when scrolling
+ul li a.nav-active {
+    border-left: 2px solid black;
+	padding-left: 5px;
+	color: #000;
+}
+
+//nav menu styles
+nav.stick {
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+}
+
+nav.stick.navbar-inverse {
+	background-color: rgba(34,34,34, .85);
+	border: none;
+
+	ul li a {
+		color: #fff;
+	}
+}
+
+button.navbar-toggle {
+	margin-top: 15px;
+	border: none;
+	border-radius: 0;
+}
+
+//mobile styles for nav menu
+@media (max-width: @screen-md-min) {
+
+	ul li a.nav-active {
+	    border-left: 2px solid #fff;
+		padding-left: 15px;
+		color: #fff;
+	}
+
+	nav.stick {
+	    position: fixed;
+	    top: 0;
+	    right: 0;
+	    z-index: 10000;
+	    margin-top: 50px;
+
+	    .navbar-collapse {
+	    	padding-right: 25px;
+	    	padding-left: 25px;
+
+	    }
+
+	    .navbar-toggle {
+	    	margin-right: 0;
+	    	margin-top: 7.5px;
+	    }
+
+	    .navbar-toggle.collapsed {
+	    	// border: none;
+	    	padding-top: 10px;
+	    	padding-right: 15px;
+	    	padding-left: 15px;
+	    	margin-bottom: 0;
+	    }
+
+	    .navbar-brand {
+	    	display: none;
+	    }
+	}
+}
+
+
+//hca logo at top of side nav
+#logo{
+
+	text-align: left;
+	padding-top: 10px;
+
+	.hca-type{
+		font-family: "Times New Roman";
+		font-weight: 700;
+		margin-top: 0;
+		margin-bottom: 0px;
+	}
+
+	.style-guide-type-mobile{
+		font-family: "lato";
+		font-weight: 300;
+		font-size: 16px;
+		padding-left: 10px;
+		margin-top: 0px;
+	}
+
+	.style-guide-type{
+		font-family: "lato";
+		font-weight: 300;
+		margin-top: 0px;
+		text-transform: initial;
+	}
+
+	.copyright{
+		font-size: 12px;
+		margin-left: -5px;
+
+	}
+}
+
+
+
+
+
+#wrap{
+
+	.main-content{
+		margin-top: 30px;
+		
+	}
+}
+
+
+
+
+#footer{
+	.container {
+		padding-bottom: 20px;
+	}
+
+	h3{
+		color:#919191;
+		font-family: "lato";
+		font-weight: bold;
+		
+	}
+
+	.col-sm-8 {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.footer-text {
+		color:#919191;
+		font-size: 12px;
+	}
+	a {
+		display: block;
+		font-size: 12px;
+	}
+
+	.footer-social {
+		padding-left: 20px;
+		margin-left: -20px;
+		margin-bottom: 0;
+		text-align: left;
+
+		span {
+			padding-right: 5px;
+			font-size: 12px;
+			text-transform: uppercase;
+			text-align: left;
+		}
+
+
+		li {
+			display: inline-block;
+			padding-right: 5px;
+		}
+	}
+}
+
+@media (max-width: @screen-sm-min) {
+	#footer {
+		.container {
+			padding-bottom: 0px;
+		}
+
+		.footer-col {
+			// text-align: center;
+			padding-bottom: 15px;
+		}
+
+		.col-sm-8 {
+			padding-left: 15px;
+		}
+	}
+}
+
+

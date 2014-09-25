@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -11,8 +15,11 @@
           <link rel="stylesheet" href="_bower_components/bootstrap/dist/css/bootstrap.css">
           <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
+          <!-- build:js scripts/vendor/modernizr.js -->
+          <script src="_bower_components/modernizr/modernizr.js"></script>
+          <!-- endbuild -->
+
           {% include styles.html %}
-          <!-- <link rel="stylesheet" href="n/main.css"> -->
         <!-- Syntax highlighting CSS -->
 
         <!-- Custom CSS -->
@@ -22,45 +29,53 @@
     </head>
     <body>
       
-       <div id="wrap">
+      <div id="wrap">
 
-      <!-- Header -->
-      {% include header.html %}
-      <!-- Header end-->
-        
-        <!-- dir-nav -->
-        {% include dir-nav.html %}
-        <!-- dir-nav end-->
+        <!-- Header -->
+        {% include header-v2.html %}
+        <!-- Header end-->
 
-      <!-- Begin page content -->
-      <div class="container-md">
-      <!-- nav-menu -->
-        {% include nav-menu.html %}
-        <!-- nav-menu end-->
+        {% include mobile-nav.html %}
 
-        <!-- main-content -->
-        {{page.title}}
-        <div class="col-md-10 main-content">
-            {% if page.title == 'index' %}
-              {% include pages/welcome.html %}
-            {% else %}
-              {{content}}
-            {% endif %}
-        </div>
-        <!-- main-content end-->
+          
+          <!-- dir-nav -->
+          
+          <!-- dir-nav end-->
 
-      </div><!-- end of container -->
+        <!-- Begin page content -->
+        <div class="container">
+          <!-- nav-menu -->
+          {% include nav-menu-v2.html %}
+          <!-- nav-menu end-->
+
+          <!-- main-content -->
+          <div class="col-md-10 col-md-offset-2 main-content">
+              <!-- {% if page.title == 'index' %}
+                {% include pages/welcome.html %}
+              {% else %} -->
+                {{content}}
+              <!-- {% endif %} -->
+          </div>
+          <!-- main-content end-->
+
+        </div><!-- end of container -->
+
+         <!-- footer -->
+        {% include footer-v2.html %}
+        <!-- footer end-->
 
       
     </div><!-- end of the wrap div -->
-    <!-- footer -->
-    {% include footer.html %}
-    <!-- footer end-->
 
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
 
     <!-- build:js(app) /y/scripts.js -->
     <script src="_bower_components/jquery/dist/jquery.min.js"></script>
     <script src="_bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/scroll-nav.js"></script>
+    <script src="scripts/jquery.scrollTo.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
     </body>
