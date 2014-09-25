@@ -7,8 +7,7 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- build:css(app) /n/main.css -->
-          <script src="_bower_components/less/dist/less-1.7.5.js"></script>
-          <link rel="stylesheet" href="_bower_components/bootstrap/dist/css/bootstrap.css">
+          <link rel="stylesheet" href="../_bower_components/bootstrap/dist/css/bootstrap.css">
           <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
           {% include styles.html %}
@@ -33,13 +32,14 @@
         <!-- dir-nav end-->
 
       <!-- Begin page content -->
-      <div class="container-md">
+      <div class="container-lg">
       <!-- nav-menu -->
         {% include nav-menu.html %}
         <!-- nav-menu end-->
 
         <!-- main-content -->
-        {{page.title}}
+        <p>this is the {{page.title}} page</p>
+        
         <div class="col-md-10 main-content">
             {% if page.title == 'index' %}
               {% include pages/welcome.html %}
@@ -59,9 +59,7 @@
 
 
     <!-- build:js(app) /y/scripts.js -->
-    <script src="_bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="_bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="scripts/main.js"></script>
+   {% include scripts.html %}
     <!-- endbuild -->
     </body>
 </html>
