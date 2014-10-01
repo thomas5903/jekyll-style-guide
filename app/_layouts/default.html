@@ -36,10 +36,6 @@
 
         {% include mobile-nav.html %}
 
-          
-          <!-- dir-nav -->
-          
-          <!-- dir-nav end-->
 
         <!-- Begin page content -->
         <div class="container">
@@ -47,37 +43,13 @@
           {% include nav-menu-v2.html %}
           <!-- nav-menu end-->
 
-<<<<<<< HEAD
-      <!-- Begin page content -->
-      <div class="container-lg">
-      <!-- nav-menu -->
-        {% include nav-menu.html %}
-        <!-- nav-menu end-->
-
-        <!-- main-content -->
-        <p>this is the {{page.title}} page</p>
-        
-        <div class="col-md-10 main-content">
-            {% if page.title == 'index' %}
-              {% include pages/welcome.html %}
-            {% else %}
-              {{content}}
-            {% endif %}
-        </div>
-        <!-- main-content end-->
-=======
           <!-- main-content -->
           <div class="col-md-10 col-md-offset-2 main-content">
-              <!-- {% if page.title == 'index' %}
-                {% include pages/welcome.html %}
-              {% else %} -->
                 {{content}}
-              <!-- {% endif %} -->
           </div>
           <!-- main-content end-->
 
         </div><!-- end of container -->
->>>>>>> f6341a370a0d477de3397cc787ae047621d031df
 
          <!-- footer -->
         {% include footer-v2.html %}
@@ -91,15 +63,14 @@
     <![endif]-->
 
     <!-- build:js(app) /y/scripts.js -->
-<<<<<<< HEAD
+
    {% include scripts.html %}
-=======
+
     <script src="_bower_components/jquery/dist/jquery.min.js"></script>
     <script src="_bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="scripts/scroll-nav.js"></script>
     <script src="scripts/jquery.scrollTo.js"></script>
     <script src="scripts/main.js"></script>
->>>>>>> f6341a370a0d477de3397cc787ae047621d031df
     <!-- endbuild -->
     </body>
 </html>

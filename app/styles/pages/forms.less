@@ -7,14 +7,133 @@
 	border-radius: 3px;
 }
 
-.has-success .form-control {
-	color: #3C763D;
-	border-color: #ccc;
+
+.form-control select {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-.form-group i {
+.form-horizontal label {
+	padding-bottom: 10px;
+	text-transform: initial;
+
+}
+
+.horizontal-btn {
+	padding-top: 34px;
+}
+
+.horizontal-btn button {
+	text-align: center;
+	width: 100%;
+	height: 40px;
+}
+
+.horizontal-field-name {
+	padding-top: 34px;
+	text-align: center;
+}
+
+
+.has-feedback .form-control-feedback { //checkmark icon positioning due higher line-height
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+}
+
+.form-group .fa-search {
 	float: right;
 	margin-top: -27px;
 	margin-right: 10px;
 	color: #ccc;
 }
+
+//success input/placeholder text
+.has-success {
+
+	.form-control {
+		color: #3C763D;
+		border-color: #ccc;
+	}
+
+	::-webkit-input-placeholder {
+   		color: #009900;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: #009900;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: #009900;  
+	}
+
+	:-ms-input-placeholder {  
+	   color: #009900;  
+	}
+
+}
+
+//warning input/text
+.has-warning {
+	border-color: #E96E57;
+
+	.form-control:focus {
+		border-color: #E96E57;
+	}
+
+	::-webkit-input-placeholder {
+		color: #E96E57;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: #E96E57;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: #E96E57;  
+	}
+
+	:-ms-input-placeholder {  
+	   color: #E96E57;  
+	}
+}
+
+// simulates focused state
+#focusedInput {
+	border-color: #ccc;
+	border-color: rgba(82,168,236,.8);
+	outline: 0;
+	outline: thin dotted \9;
+	-webkit-box-shadow: 0 0 8px rgba(82,168,236,.6);
+	box-shadow: 0 0 8px rgba(82,168,236,.6);
+}
+
+
+
+//Aside card section
+//
+
+.hca-card { //styles here should be relevant for every type of aside card
+	border-radius: 3px;
+	padding: 20px;
+
+	h4 {
+		color: #919191;
+		margin-bottom: 0;
+		margin-top: 20px;
+	}
+
+}
+
+.aside-info span {
+	font-size: 20px;
+	display: block;
+}
+
+.card-outline {
+	border: 1px solid #ddd;
+}
+
+
