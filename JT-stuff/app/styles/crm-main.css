@@ -12532,8 +12532,10 @@ select.select-styled {
   outline: none;
   width: 100%;
 }
+
+/* swapped background image here to fit actual height of forms. old file was select-arrow-36w.png */
 select.select-styled {
-  background: url("../img/select-arrow-36w.png") no-repeat right #ffffff;
+  background: url("../img/select-arrow-40px.png") no-repeat right #ffffff; 
   -webkit-appearance: none;
 }
 select::-ms-expand {

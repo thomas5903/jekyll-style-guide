@@ -24,6 +24,16 @@
             <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Standard Input Field">
           </div>
 
+          <!-- select input -->
+          <div class="form-group float-label">
+              <label for="gender" class="sr-only">Select Dropdown</label>
+              <select name="select" id="select" class="form-control select-styled required">
+                  <option value="" disabled="" selected="">Select</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+              </select>
+          </div>
+
           <!-- input with success -->
           <div class="form-group has-success has-feedback">
             <label class="control-label sr-only" for="inputSuccess2">Input with success</label>
@@ -31,16 +41,7 @@
             <i class="fa fa-check fa-lg form-control-feedback"></i>
           </div>
 
-          <!-- select input -->
-          <div class="form-group">
-            <label class="sr-only" for="disabledSelect">Disabled select menu</label>
-            <select id="disabledSelect" class="form-control">
-              <option>Select</option>
-              <option>Option 1</option>
-              <option>Option 2</option>
-            </select>
-          </div>
-
+          <!-- search input -->
           <div class="form-group">
             <label class="sr-only" for="exampleInputEmail2">Search Input</label>
             <input type="search" class="form-control" placeholder="Enter search term">
@@ -55,9 +56,25 @@
       <div class="row">
         <div class="col-sm-6">
           <h5>Checkbox Fields</h5>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+          </label>
+
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+          </label>
         </div>
         <div class="col-sm-6">
           <h5>Radio Button Fields</h5>
+
+
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+          </label>
+
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+          </label>
         </div>
       </div>
 
@@ -65,6 +82,18 @@
       <div class="row">
         <div class="col-xs-12">
           <h5>Form States</h5>
+
+          <div class="form-group">
+            <label class="sr-only" for="focusedInput">Focused Input</label>
+            <input type="email" class="form-control" id="focusedInput" placeholder="Focused On">
+          </div>
+
+          <!-- warning state input -->
+          <div class="form-group has-warning">
+            <label class="control-label sr-only" for="inputWarning">Warning Input</label>
+            <input type="text" class="form-control" id="inputWarning" placeholder="Warning">
+          </div>
+
         </div>
       </div>
 
@@ -78,22 +107,98 @@
   </div>
 
   <div class="row">
-    <!-- insert horizontal form field with submit button -->
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <div class="col-sm-2 horizontal-field-name">
+          <h4>Field Name</h4>
+        </div>
+        <div class="col-sm-8">
+          <label class="control-label" for="formGroupInputLarge">Field Label</label>
+          <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Horizontal Form Input">
+        </div>
+        <div class="col-sm-2 horizontal-btn">
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
   </div>
 
 
 
 
-  <div class="row">
 
-    <div class="col-sm-5">
+  <div class="row">
+    <div class="col-sm-12">
       <h3>Aside Cards</h3>
-      <p>Aside cards act as additional information on a page. They take on varios content. A few variations of the aside card are shown below.</p>
-      <!-- insert some aside cards here -->
+    </div>
+  </div>
+
+  <!-- row with columns containing aside cards -->
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Aside cards act as additional information on a page. They may take on various content. A fiew variations of the aside card are shown below.</p>
+
+
+      <!-- aside card with map -->
+      <aside class="hca-card card-outline">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.6446454748116!2d-86.8174352!3d36.150864699999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886466b404626dc1%3A0x3dfd66f3dcbafafe!2s2545+Park+Plaza%2C+Nashville%2C+TN+37203!5e0!3m2!1sen!2sus!4v1412198403385" width="100%" height="250px" frameborder="0" style="border:0"></iframe>
+
+          <div class="aside-info">
+            <h3>Facility Name Here</h3>
+            <h4>Location</h4>
+            <span>2545 Park Plaza <br>
+               Nashville TN, 37203
+            </span>
+
+            <hr class="clear">
+
+            <h4>Phone</h4>
+            <span>123-456-7890</span>
+            <h4>Hours</h4>
+            <span>Monday - Friday</span>
+            <span>9am - 4pm</span>
+          </div>
+
+          <br>
+
+          <a href="#" class="btn btn-primary btn-block btn-lg">
+            View Larger Map
+          </a>
+      </aside>
+      <!-- end location aside card -->
+
     </div>
 
-    <div class="col-sm-7">
-      <!-- insert some aside cards here -->
+    <div class="col-sm-4">
+
+      <!-- make an appointment aside card - no photo -->
+      <aside class="hca-card card-outline">
+          <div class="aside-info">
+            <h3>This is a Title</h3>
+
+            <hr class="clear">
+
+            <h4>Phone</h4>
+            <span>123-456-7890</span>
+
+            <h4>Location</h4>
+            <span>Nashville TN, 37203</span>
+
+            <h4>Specialty</h4>
+            <span>Family Practice</span>
+          </div>
+
+          <br>
+
+          <a href="#" class="btn btn-default btn-block btn-lg">
+            Make an Appointment
+          </a>
+      </aside>
+
+    </div>
+
+    <div class="col-sm-4">
+
     </div>
 
   </div>
